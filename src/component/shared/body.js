@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "../tabs/home";
-import NotFound from "../common/NotFound";
+import NotFound from "../common/notfound";
 import SignUp from "../user/signup";
 import Login from "../user/login";
 import Profile from "../user/profile";
