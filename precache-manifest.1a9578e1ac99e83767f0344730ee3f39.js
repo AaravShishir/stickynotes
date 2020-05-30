@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "da71e0a31774ffe44c109366f7cc18ca",
+    "revision": "0f6768653dbe02bebfd42a387798c679",
     "url": "/stickynotes/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stickynotes/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "b0a0feb233d0180e1a5f",
+    "revision": "3c7ec1f56eb2dd11f8f8",
     "url": "/stickynotes/static/css/main.bfc5e851.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stickynotes/static/js/2.d9a2ceca.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b0a0feb233d0180e1a5f",
-    "url": "/stickynotes/static/js/main.6c64efc9.chunk.js"
+    "revision": "3c7ec1f56eb2dd11f8f8",
+    "url": "/stickynotes/static/js/main.a9072ea9.chunk.js"
   },
   {
     "revision": "314866992bf7988a44e8",
