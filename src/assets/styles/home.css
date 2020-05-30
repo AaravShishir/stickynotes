@@ -1,0 +1,47 @@
+.home-content {
+  min-height: 78vh;
+}
+
+.time-card-text {
+  font-weight: 400;
+  font-size: 16px;
+  float: right;
+}
+
+.nav-buttons {
+  display: block;
+}
+
+.card:hover {
+  background-color: #f8f9fa;
+}
+
+.card .card-body p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card-link {
+  cursor: pointer;
+}
+
+.bg-snwarning {
+  background-color: #ffc1071f;
+}
+
+.bg-sndanger {
+  background-color: #dc35451f;
+}
+
+.bg-snprimary {
+  background-color: #007bff1f;
+}
+
+.bg-sninfo {
+  background-color: #17b83a1f;
+}
+
+.txt-editcontent {
+  font-size: 14px !important;
+}

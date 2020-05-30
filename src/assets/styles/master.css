@@ -1,0 +1,31 @@
+.background-image {
+  background: url(../images/HomeBanner.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.dropdown-menu {
+  min-width: 8.35rem;
+  margin-top: 0.5rem;
+  background-color: #f8f9fa !important;
+  position: absolute !important;
+  text-align: center;
+}
+
+.dropdown-menu button {
+  min-width: 5rem;
+}
+
+.dropdown-toggle {
+  min-width: 7.25rem;
+  text-align: right;
+}
+
+.brandName {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
