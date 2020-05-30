@@ -13,10 +13,10 @@ class Body extends React.Component {
       <div className="container my-3">
         <div className="px-2 light home-content">
           <Switch>
-            <PrivateRoute exact path="/" component={Home}></PrivateRoute>
-            <PrivateRoute exact path="/myprofile" component={Profile}></PrivateRoute>
-            <Route exact path="/signup" component={SignUp}></Route>
-            <Route exact path="/login" component={Login}></Route>
+            <PrivateRoute exact path="/stickynotes" component={Home}></PrivateRoute>
+            <PrivateRoute exact path="/stickynotes/myprofile" component={Profile}></PrivateRoute>
+            <Route exact path="/stickynotes/signup" component={SignUp}></Route>
+            <Route exact path="/stickynotes/login" component={Login}></Route>
             <Route path="*" component={NotFound}></Route>
           </Switch>
         </div>

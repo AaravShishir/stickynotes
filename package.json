@@ -1,6 +1,6 @@
 {
   "homepage": "http://aaravshishir.github.io/stickynotes",
-  "name": "learntocode",
+  "name": "stickynotes",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -10,17 +10,17 @@ class Header extends React.Component {
 
   LoginUser() {
     this.setState({ showSignup: true });
-    this.nextPath("/login");
+    this.nextPath("/stickynotes/login");
   }
 
   SignUpUser() {
     this.setState({ showSignup: true });
-    this.nextPath("/signup");
+    this.nextPath("/stickynotes/signup");
   }
 
   SignOutUser() {
     this.setState({ showSignup: false });
-    this.nextPath("/");
+    this.nextPath("/stickynotes");
   }
 
   nextPath(path) {
@@ -28,7 +28,7 @@ class Header extends React.Component {
   }
 
   GetUserProfile() {
-    this.nextPath("/myprofile");
+    this.nextPath("/stickynotes/myprofile");
   }
 
   render() {
