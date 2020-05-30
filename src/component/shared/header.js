@@ -36,7 +36,7 @@ class Header extends React.Component {
       <div className="pt-4">
         <Container>
           <Navbar className="rounded" sticky="top" collapseOnSelect expand="lg" bg="light " variant="light ">
-            <Navbar.Brand as={Link} to="/" title="Home">
+            <Navbar.Brand as={Link} to="/stickynotes" title="Home">
               <img src="./images/BrandLogo.png" width="30" height="30" className="d-inline-block align-top" alt="Sticky Notes" />
             </Navbar.Brand>
             <Navbar.Collapse>
