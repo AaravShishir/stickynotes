@@ -4,6 +4,9 @@ import "../../assets/styles/home.css";
 import stickyNotesAPI from "../../api/common_api";
 import ViewNotes from "../actions/viewnotes";
 import EditNotes from "../actions/editnotes";
+import AddNotes from "../actions/addnotes";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 class Home extends React.Component {
   constructor(props) {
@@ -12,6 +15,7 @@ class Home extends React.Component {
       AllTodos: [],
       ShowViewNotes: { show: false, title: "", description: "" },
       ShowEditNotes: { show: false, title: "", description: "" },
+      ShowAddNotes: { show: false, title: "", description: "" },
       ShowDeleteNotes: false,
     };
   }
@@ -27,6 +31,10 @@ class Home extends React.Component {
 
   setShowEditNotes = (flag, title, desc) => {
     this.setState({ ...this.state, ShowEditNotes: { show: flag, title: title, description: desc } });
+  };
+
+  setShowAddNotes = (flag) => {
+    this.setState({ ...this.state, ShowAddNotes: { show: flag, title: "", description: "" } });
   };
 
   render() {
@@ -47,10 +55,18 @@ class Home extends React.Component {
           </div>
           <ViewNotes ShowViewNotes={this.state.ShowViewNotes} setShowViewNotes={this.setShowViewNotes.bind(this)} />
           <EditNotes ShowEditNotes={this.state.ShowEditNotes} setShowEditNotes={this.setShowEditNotes.bind(this)} />
+          <AddNotes ShowAddNotes={this.state.ShowAddNotes} setShowAddNotes={this.setShowAddNotes.bind(this)} />
+          <div title="Add Notes" className="add-notes" onClick={() => this.setShowAddNotes(true)}>
+            <FontAwesomeIcon icon={faPlus} />
+          </div>
         </div>
       );
     } else {
-      return "Loading...";
+      return (
+        <div className="light">
+          <div className="row">Loading...</div>
+        </div>
+      );
     }
   }
 }

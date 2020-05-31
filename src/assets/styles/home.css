@@ -45,3 +45,14 @@
 .txt-editcontent {
   font-size: 14px !important;
 }
+
+.add-notes {
+  position: fixed;
+  top: 75%;
+  margin-left: 75%;
+  padding: 10px 15px;
+  background-color: #f32d27;
+  border-radius: 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
