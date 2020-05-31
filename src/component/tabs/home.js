@@ -5,6 +5,7 @@ import stickyNotesAPI from "../../api/common_api";
 import ViewNotes from "../actions/viewnotes";
 import EditNotes from "../actions/editnotes";
 import AddNotes from "../actions/addnotes";
+import DeleteNotes from "../actions/deletenotes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
@@ -16,7 +17,7 @@ class Home extends React.Component {
       ShowViewNotes: { show: false, title: "", description: "" },
       ShowEditNotes: { show: false, title: "", description: "" },
       ShowAddNotes: { show: false, title: "", description: "" },
-      ShowDeleteNotes: false,
+      ShowDeleteNotes: { show: false, title: "" },
     };
   }
 
@@ -37,6 +38,10 @@ class Home extends React.Component {
     this.setState({ ...this.state, ShowAddNotes: { show: flag, title: "", description: "" } });
   };
 
+  setShowDeleteNotes = (flag, title) => {
+    this.setState({ ...this.state, ShowDeleteNotes: { show: flag, title: title } });
+  };
+
   render() {
     if (this.state.AllTodos.length > 0) {
       return (
@@ -47,6 +52,7 @@ class Home extends React.Component {
                 <TDACard
                   setShowViewNotes={this.setShowViewNotes.bind(this)}
                   setShowEditNotes={this.setShowEditNotes.bind(this)}
+                  setShowDeleteNotes={this.setShowDeleteNotes.bind(this)}
                   key={element.todoId}
                   Data={element}
                 ></TDACard>
@@ -56,6 +62,7 @@ class Home extends React.Component {
           <ViewNotes ShowViewNotes={this.state.ShowViewNotes} setShowViewNotes={this.setShowViewNotes.bind(this)} />
           <EditNotes ShowEditNotes={this.state.ShowEditNotes} setShowEditNotes={this.setShowEditNotes.bind(this)} />
           <AddNotes ShowAddNotes={this.state.ShowAddNotes} setShowAddNotes={this.setShowAddNotes.bind(this)} />
+          <DeleteNotes ShowDeleteNotes={this.state.ShowDeleteNotes} setShowDeleteNotes={this.setShowDeleteNotes.bind(this)} />
           <div title="Add Notes" className="add-notes" onClick={() => this.setShowAddNotes(true)}>
             <FontAwesomeIcon icon={faPlus} />
           </div>

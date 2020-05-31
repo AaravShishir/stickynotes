@@ -18,7 +18,7 @@ class TDACard extends React.Component {
             <Card.Link className="text-primary" onClick={() => this.props.setShowEditNotes(true, this.props.Data.title, this.props.Data.body)}>
               <FontAwesomeIcon title="Edit" icon={faEdit} />
             </Card.Link>
-            <Card.Link className="text-danger" href="#">
+            <Card.Link className="text-danger" onClick={() => this.props.setShowDeleteNotes(true, this.props.Data.title)}>
               <FontAwesomeIcon title="Delete" icon={faTrashAlt} />
             </Card.Link>
             <Card.Link className="text-muted time-card-text">{helper.FormatDate(this.props.Data.createdOn)}</Card.Link>
