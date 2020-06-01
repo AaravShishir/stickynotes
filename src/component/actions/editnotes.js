@@ -46,7 +46,7 @@ class EditNotes extends React.Component {
           <Button onClick={() => this.props.setShowEditNotes(false, this.props.ShowEditNotes.title, this.props.ShowEditNotes.description)}>
             Cancel
           </Button>
-          <Button>Update</Button>
+          <Button className="btn btn-success">Update</Button>
         </Modal.Footer>
       </Modal>
     );

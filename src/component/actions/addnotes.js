@@ -5,6 +5,7 @@ class AddNotes extends React.Component {
   constructor(props) {
     super(props);
   }
+
   render() {
     return (
       <Modal show={this.props.ShowAddNotes.show} size="md" aria-labelledby="contained-modal-title-vcenter" animation={false} centered>
@@ -50,7 +51,7 @@ class AddNotes extends React.Component {
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={() => this.props.setShowAddNotes(false)}>Cancel</Button>
-          <Button>Add</Button>
+          <Button className="btn btn-success">Add</Button>
         </Modal.Footer>
       </Modal>
     );
