@@ -1,7 +1,24 @@
 import React, { Component } from "react";
 import "../../assets/styles/login.css";
+import userAPI from "../../api/user_api";
+import $ from "jquery";
 
 class Login extends Component {
+  nextPath(path) {
+    this.props.history.push(path);
+  }
+
+  loginUser = async () => {
+    const userId = $("#email").val();
+    const pwd = $("#pswd").val();
+    await userAPI.loginUser(userId, pwd).then((data) => {
+      if (data) {
+        this.nextPath("/");
+      } else {
+      }
+    });
+  };
+
   nextPath(path) {
     this.props.history.push(path);
   }
@@ -23,15 +40,17 @@ class Login extends Component {
             <div className="col-md-12 col-xs-12 login_control mb-3">
               <div className="control">
                 <div className="label">Email Address</div>
-                <input type="text" className="form-control" placeholder="E-mail" />
+                <input id="email" type="text" className="form-control" placeholder="E-mail" />
               </div>
 
               <div className="control">
                 <div className="label">Password</div>
-                <input type="password" className="form-control" placeholder="Password" />
+                <input id="pswd" type="password" className="form-control" placeholder="Password" />
               </div>
               <div align="center">
-                <button className="btn btn-outline-danger">Login</button>
+                <button className="btn btn-outline-danger" onClick={() => this.loginUser()}>
+                  Login
+                </button>
                 <button className="btn btn-outline-primary ml-2">Forgot Password?</button>
               </div>
             </div>

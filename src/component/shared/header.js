@@ -1,26 +1,30 @@
 import React from "react";
 import { Nav, Navbar, Container, Button, NavDropdown } from "react-bootstrap";
 import { Link, withRouter } from "react-router-dom";
+import helper from "../../shared/helper";
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { showSignup: false };
+    this.state = { showSignup: helper.IsUserAuthenticated() };
+  }
+
+  componentWillReceiveProps() {
+    this.setState({ showSignup: helper.IsUserAuthenticated() });
   }
 
   LoginUser() {
-    this.setState({ showSignup: true });
     this.nextPath("/login");
   }
 
   SignUpUser() {
-    this.setState({ showSignup: true });
+    //this.setState({ showSignup: true });
     this.nextPath("/signup");
   }
 
   SignOutUser() {
-    this.setState({ showSignup: false });
-    this.nextPath("/");
+    helper.RemoveAuthKey();
+    window.location.reload(false);
   }
 
   nextPath(path) {

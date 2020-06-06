@@ -5,7 +5,7 @@ let stickynotesApiInstance = axios.create();
 
 async function getToDos() {
   try {
-    let url = constants.stickynotesapi + constants.notes.view;
+    let url = constants.stickynotesapi + constants.api.notes.view;
     //let todos = await stickynotesApiInstance.get(url);
     return todos;
   } catch (error) {
