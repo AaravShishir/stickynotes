@@ -9,7 +9,7 @@ import Footer from "./component/shared/footer";
 function App() {
   return (
     <div className="bg-white">
-      <BrowserRouter basename="/stickynotes">
+      <BrowserRouter basename="">
         <Header />
         <Body />
         <Footer />
