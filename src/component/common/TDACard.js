@@ -7,7 +7,7 @@ import { faEye, faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 class TDACard extends React.Component {
   render() {
     return (
-      <div className=" col-xs-12 col-sm-12 col-md-4 mb-3">
+      <div className=" col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-3">
         <Card className={this.props.Data.background}>
           <Card.Body className="py-3">
             <Card.Title>{this.props.Data.title}</Card.Title>
