@@ -13,6 +13,4 @@ let userApiInstance = axios.create();
 
 // forgotPassword -- TODO
 
-export default {
-  getToDos,
-};
+export default {};
