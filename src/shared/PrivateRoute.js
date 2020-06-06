@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
 import authenticateAPI from "../api/authentication";
+import GuestUserHome from "../component/common/guestuserhome";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const [authKey, setAuthKey] = useState(false);
@@ -23,7 +24,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
   if (isLoading) {
     return null;
   } else {
-    return <Route {...rest} component={authKey ? Component : UnAuthorizedEntry} />;
+    return <Route {...rest} component={authKey ? Component : GuestUserHome} />;
   }
 };
 
