@@ -1,9 +1,18 @@
 export let constants = {
   stickynotesapi: "https://us-central1-stickynotesapi.cloudfunctions.net/api/",
-  getTodo: "alltodo",
-  createtodo: "addtodo",
-  edittodo: "updatetodo/{0}",
-  deletetodo: "deletetodo/{0}",
+  notes: {
+    view: "alltodo",
+    create: "addtodo",
+    edit: "updatetodo/{0}",
+    delete: "deletetodo/{0}",
+  },
+  user: {
+    login: "login",
+    logout: "logout",
+    signup: "signup",
+    forgotpwd: "forgotpassword",
+    userdetails: "userdetails",
+  },
 };
 
 export let todos = [
