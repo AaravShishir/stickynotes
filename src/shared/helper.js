@@ -11,11 +11,10 @@ function GetAuthKey() {
 }
 
 function RemoveAuthKey() {
-  return ls.remove(constants.localStorage.authkey);
+  ls.remove(constants.localStorage.authkey);
 }
 
 function IsUserAuthenticated() {
-  debugger;
   let authKey = ls.get(constants.localStorage.authkey);
   return authKey ? true : false;
 }
