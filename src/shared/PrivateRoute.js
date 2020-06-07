@@ -28,12 +28,4 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
   }
 };
 
-const UnAuthorizedEntry = () => {
-  return (
-    <div>
-      <span>You are Not Authorized</span>
-    </div>
-  );
-};
-
 export default PrivateRoute;
