@@ -11,7 +11,7 @@ class Body extends React.Component {
   render() {
     return (
       <div className="container my-3">
-        <div className="px-2 light home-content">
+        <div className="light home-content">
           <Switch>
             <PrivateRoute exact path="/" component={Home}></PrivateRoute>
             <PrivateRoute exact path="/myprofile" component={Profile}></PrivateRoute>
