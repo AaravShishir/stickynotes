@@ -8,7 +8,7 @@ import Footer from "./component/shared/footer";
 
 function App() {
   return (
-    <div className="bg-white">
+    <div className="bg-white container">
       <BrowserRouter basename="">
         <Header />
         <Body />

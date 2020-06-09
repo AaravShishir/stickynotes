@@ -10,7 +10,7 @@ import PrivateRoute from "../../shared/PrivateRoute";
 class Body extends React.Component {
   render() {
     return (
-      <div className="container my-3">
+      <div className="my-3">
         <div className="light home-content">
           <Switch>
             <PrivateRoute exact path="/" component={Home}></PrivateRoute>
