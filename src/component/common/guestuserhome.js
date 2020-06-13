@@ -6,7 +6,7 @@ class GuestUserHome extends React.Component {
     return (
       <div>
         <div>
-          <Carousel>
+          <Carousel interval={3000}>
             <Carousel.Item>
               <img className="d-block w-100" src="./images/carousels/1.jpg" alt="About Sticky Notes" />
               <Carousel.Caption>
